@@ -4,8 +4,8 @@ slug: newp-bootstrap
 ecosystem: RandomRingtone
 platform: iOS
 type: newp
-status: in_progress
-resume: false
+status: done
+resume: ""
 ---
 
 # Sessie 2026-05-29 — RandomRingtoneIOS newp bootstrap
