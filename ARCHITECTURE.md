@@ -98,7 +98,24 @@ iOS heeft historisch geen public ringtone-API. Bekende routes (te onderzoeken):
 - Geen `BroadcastReceiver`-equivalent → push-driven updates moeilijker.
 - Sandboxing strikter → geen toegang tot system-tones-directory zonder enterprise.
 
-## 9. Open architectuur-vragen (samenvatting)
+## 9. Bewust uitgesteld in skeleton-fase
+
+Volgende docs worden **nog niet** aangemaakt omdat ze pas zin krijgen bij UI/code, maar zijn expliciet gepland zodat de gaten transparant zijn:
+
+| Doc | Verantwoording uitstel | Deadline |
+|---|---|---|
+| `DESIGN_TOKENS.md` | Geen UI yet — kleur/typografie/spacing pas relevant bij eerste SwiftUI-scherm | Begin fase 2 (eerste view) |
+| `docs/screens/` | Geen views | Begin fase 2 (eerste Figma/Sketch-mock) |
+| `CONTENT_INVENTORY.md` of `docs/pages/` | Geen live tekst | Begin fase 2 (eerste tekst-fragment) |
+| `CHANGELOG.md` | `RELEASES.md` vervult dit nu; bij echte release-cadence (TestFlight) wordt CHANGELOG losgekoppeld | Eerste TestFlight build |
+
+Wat **wél** in fase 1 moet (zie `ACTIONS.md` § Vastlegging-gates):
+- `docs/PRINCIPLES.md` — ontwerp- en architectuurprincipes (waarom Swift/SwiftUI, waarom iOS 16+, waarom SwiftPM-eerst, waarom geen externe deps in skeleton)
+- `docs/DEPENDENCIES.md` — module-graaf + oorzaak-gevolg-matrix per shared concept
+- `docs/USER_JOURNEYS.md` — Android-flows als referentie + iOS-verschillen
+- 3 onderzoeks-docs voor OPEN-1, OPEN-5, OPEN-6
+
+## 10. Open architectuur-vragen (samenvatting)
 
 | ID | Vraag | Plaats |
 |---|---|---|
@@ -108,3 +125,5 @@ iOS heeft historisch geen public ringtone-API. Bekende routes (te onderzoeken):
 | OPEN-4 | Distributie-kanaal | dit doc § 7 + Meta_RandomRingtone STATUS |
 | OPEN-5 | SwiftData vs Core Data | dit doc § 2 |
 | OPEN-6 | Background-rotatie strategie | dit doc § 8 |
+
+Sanitycheck-uitkomst 29-5: skeleton-fase ~70% conform aan `feedback_expliciete_vastlegging.md`. Gaten gepland in `ACTIONS.md` § Vastlegging-gates en hierboven § 9.
